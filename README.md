@@ -50,7 +50,7 @@ The point is sifting, not recognition. In every scenario there is:
 
 A student who pattern-matches "regular interval = C2" or "SUCCESS = contained" gets it wrong, which
 is the lesson.
-
+ 
 ## Instructor mode
 
 PIN **3693**, same as the rest of the toolkit. Reveals every answer with its reasoning, highlights

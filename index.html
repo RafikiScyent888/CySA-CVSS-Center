@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>CySA CVSS Center &mdash; read the vector, then read the logs</title>
+<script>
+  /* Before first paint, so a saved dark choice does not flash light. */
+  (function(){try{var t=localStorage.getItem("cysacvss-theme");
+    if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b111b'/%3E%3Cpath d='M20 62 L38 62 L46 40 L56 74 L64 55 L80 55' fill='none' stroke='%232fe0db' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="pg">
+  <div class="wrap">
+    <h1>CySA <span>CVSS Center</span></h1>
+    <p>Fifteen generated intrusions. Each one is a single incident seen through seven tools &mdash; read the logs, find what actually happened, and account for it at the bottom.</p>
+    <div class="pg-bar">
+      <label for="slotSelect" style="font-family:var(--mono);font-size:var(--fs-xs);letter-spacing:.06em;text-transform:uppercase;color:#b9c6c9">Scenario</label>
+      <select id="slotSelect" aria-label="Choose scenario"></select>
+      <button class="btn btn--ghost" id="shuffleBtn" type="button" title="Regenerate all fifteen incidents">&#8635; Shuffle</button>
+      <button class="btn btn--ghost" id="instructorBtn" type="button">Instructor mode</button>
+      <button class="btn btn--ghost" id="themeBtn" type="button" aria-pressed="false">Dark</button>
+    </div>
+    <p class="lede" id="brief"></p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="scorebar" id="scorebar"></div>
+    <div class="tiles" id="tiles"></div>
+    <div class="cap" id="capstone"></div>
+  </div>
+</main>
+
+<footer class="pg">
+  <div class="wrap">
+    Every scenario is generated when the page loads &mdash; there is no answer bank to memorise, and Shuffle rebuilds all fifteen.
+    Counts in the questions are computed from the rows actually rendered, so they stay true after a regenerate.<br>
+    Addresses, domains and hashes are synthetic and defanged. For educational purposes only. Not affiliated with, endorsed by, or sponsored by CompTIA&reg;.
+  </div>
+</footer>
+
+<div class="ov hidden" id="pinOverlay">
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="pinTitle">
+    <h3 id="pinTitle">Instructor mode</h3>
+    <p>Reveals every answer and highlights the malicious rows in each log. Same PIN as the rest of the toolkit.</p>
+    <input id="pinInput" type="password" inputmode="numeric" autocomplete="off" aria-label="Instructor PIN" placeholder="PIN">
+    <p class="err" id="pinErr" style="display:none"></p>
+    <div class="row">
+      <button class="btn" id="pinOk" type="button">Unlock</button>
+      <button class="btn btn--ghost" id="pinCancel" type="button" style="color:var(--text);border-color:var(--border)">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

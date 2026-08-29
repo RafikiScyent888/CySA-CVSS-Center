@@ -70,7 +70,7 @@ One consequence worth knowing: **every answer is computed from the rows actually
 firewall tile asks how many users clicked, and the grader counts the same GET requests you can see.
 Nothing is hand-matched, so nothing drifts when it regenerates.
 
-## Every tile has decoys
+## Every tile has decoys 
 
 The point is sifting, not recognition. In every scenario there is:
 

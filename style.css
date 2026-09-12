@@ -548,7 +548,7 @@
     --border: #410e7c;
     --text: #000000;
     --text-dim: #220c3b;
-  }
+  } 
   :root[data-theme="light"] .tile[data-hue="crimson"] {
     --panel: #f4bdc9;
     --panel-alt: #efa9b8;

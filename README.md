@@ -120,7 +120,7 @@ student who cannot separate it from the panel behind it. Motion reinforces it an
 is dropped under `prefers-reduced-motion`.
 
 ## Instructor mode
-
+ 
 PIN **3693**, same as the rest of the toolkit. Reveals every answer with its reasoning, highlights
 the malicious rows in each log, and shows the indicator sheet at the bottom.
 
